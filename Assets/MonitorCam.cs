@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class MonitorCam : MonoBehaviour
 {
-    [SerializeField] Camera otherRoomCam; //Other room camera will be attached to this
+    /* field commented out for testing purposes */
+    // [SerializeField] Camera otherRoomCam; //Other room camera will be attached to this
     public RenderTexture renderTexture; //Need this to display the view on the cube
 
     // Update is called once per frame
@@ -11,7 +12,7 @@ public class MonitorCam : MonoBehaviour
     {
         //Update with other room camera view
         RenderTexture.active = renderTexture;
-        otherRoomCam.Render();
+        // otherRoomCam.Render(); field commented out for testing purposes
         RenderTexture.active = null;
     }
 }
